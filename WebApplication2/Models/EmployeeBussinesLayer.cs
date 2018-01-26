@@ -37,5 +37,17 @@ namespace WebApplication2.Models
             salesDal.SaveChanges();
             return emp;
         }
+
+        public bool IsValidUser(UserDetails usr)
+        {
+            if (usr.UserName == "Admin" && usr.Password=="Admin")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

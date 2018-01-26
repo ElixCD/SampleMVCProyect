@@ -11,6 +11,7 @@ namespace WebApplication2.Controllers
     public class EmployeeController : Controller
     {
         // GET: Test
+        [Authorize]
         public ActionResult Index()
         {
 

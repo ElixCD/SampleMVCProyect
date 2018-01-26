@@ -17,6 +17,8 @@ namespace WebApplication2.Models
 
         [StringLength(15,ErrorMessage ="Last Name length shold not be greater than 15 letters.")]
         public string LastName { get; set; }
+
+        [Range(10000,50000)]
         public int? Salary { get; set; }
     }
 
