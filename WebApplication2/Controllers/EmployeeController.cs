@@ -16,11 +16,13 @@ namespace WebApplication2.Controllers
         {
 
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
+            employeeListViewModel.UserName = User.Identity.Name;
+
             EmployeeBussinesLayer empBal = new EmployeeBussinesLayer();
             List<Employee> employees = empBal.GetEmployees();
             List<EmployeeViewModel> empViewModels = new List<EmployeeViewModel>();
 
-            foreach (Employee emp in employees)
+                        foreach (Employee emp in employees)
             {
                 EmployeeViewModel empViewModel = new EmployeeViewModel();
                 empViewModel.EmployeeName = emp.FirstName + " " + emp.LastName;

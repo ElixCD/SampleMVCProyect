@@ -17,16 +17,21 @@
         {
             @Html.LabelFor(c=>c.UserName)
             @Html.TextBoxFor(x=>x.UserName)
+            @Html.ValidationMessageFor(x => x.UserName);
 
             <br />
 
             @Html.LabelFor(c=>c.Password)
-            @Html.TextBoxFor(x=>x.Password)
+            @Html.PasswordFor(x=>x.Password)
 
             <hr />
 
             <input type="submit" name="BtnSubmit" value="Login" />
         }
     </div>
+    <script src="~/Scripts/jquery-1.8.0.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
 </body>
 </html>

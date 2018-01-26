@@ -49,9 +49,16 @@
         </div>*@
 
         @*Hello @Model.UserName*@
+
+        <div style="text-align:right">
+            Hello, @Model.UserName
+            <a href="/Authentication/Logout">Logout</a>
+        </div>
+        <hr />
+        <a href="/Employee/AddNew">Add New</a>
         <hr />
         <div>
-            <table>
+            <table border="1">
                 <tr>
                     <th>Employee Name</th>
                     <th>Salary</th>
@@ -65,7 +72,7 @@
                 }
             </table>
         </div>
-        <a href="/Employee/AddNew">Add New</a>
+        
         
     </div>
 </body>

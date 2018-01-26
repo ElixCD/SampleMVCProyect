@@ -16,19 +16,33 @@ namespace WebApplication2.Controllers
             return View();
         }
 
+        [HttpPost]
         public ActionResult DoLogin(UserDetails usr)
         {
-            EmployeeBussinesLayer bal = new EmployeeBussinesLayer();
-            if (bal.IsValidUser(usr))
+            if (ModelState.IsValid)
             {
-                FormsAuthentication.SetAuthCookie(usr.UserName, false);
-                return RedirectToAction("Index", "Employee");
+                EmployeeBussinesLayer bal = new EmployeeBussinesLayer();
+                if (bal.IsValidUser(usr))
+                {
+                    FormsAuthentication.SetAuthCookie(usr.UserName, false);
+                    return RedirectToAction("Index", "Employee");
+                }
+                else
+                {
+                    ModelState.AddModelError("CredentialError", "Invalid Username or Password");
+                    return View("Login");
+                }
             }
             else
             {
-                ModelState.AddModelError("CredentialError", "Invalid Username or Password");
                 return View("Login");
             }
+        }
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login");
         }
     }
 }
