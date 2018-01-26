@@ -84,7 +84,6 @@ namespace WebApplication2.Controllers
         public ActionResult SaveEmployee(Employee emp, string BtnSubmit)
         {
             // return emp.FirstName + "|" + emp.LastName + "|" + emp.Salary;
-
             switch (BtnSubmit)
             {
                 case "Save Employee":

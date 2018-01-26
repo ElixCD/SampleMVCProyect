@@ -37,6 +37,6 @@ namespace WebApplication2.Models
             }
             return ValidationResult.Success;
         }
-
     }
+
 }
