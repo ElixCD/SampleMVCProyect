@@ -1,5 +1,5 @@
 # SampleMVCProyect
-Sample "Learn MVCP proyect In 7 Days"
+Sample "Learn MVC Proyect In 7 Days"
 
 https://www.codeproject.com/Articles/866143/Learn-MVC-step-by-step-in-days-Day
 
